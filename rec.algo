@@ -1,0 +1,15 @@
+function isPalindrome(word) {
+  // Check for base cases
+  if (word.length < 2) {
+    return true;
+  }
+  
+  // Compare the characters at the ends of the word
+  if (word[0] === word[word.length-1]) {
+    // Recursively check the rest of the word
+    return isPalindrome(word.slice(1, -1));
+  } else {
+    // Stop if the characters are different
+    return false;
+  }
+}
